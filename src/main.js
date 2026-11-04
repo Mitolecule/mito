@@ -484,7 +484,7 @@ async function loadUserProfile(user, generation) {
       initializeProfile(user),
       new Promise((_, reject) => {
         timeout = window.setTimeout(
-          () => reject(new Error("Firestore is taking too long to respond. Check your connection, confirm the Firestore API is enabled for project mitoleculegroup, and verify that the published rules allow this signed-in account.")),
+          () => reject(new Error("Firestore is taking too long to respond. Check your connection, confirm the Firestore API is enabled, and verify that the published rules allow this signed-in account.")),
           15000,
         );
       }),

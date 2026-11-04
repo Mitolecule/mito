@@ -3,12 +3,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-aut
 import { initializeFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD9ilr1AhDZ3tcuvVGOf_L7izmP8LVblHQ",
-  authDomain: "mitoleculegroup.firebaseapp.com",
-  projectId: "mitoleculegroup",
-  storageBucket: "mitoleculegroup.firebasestorage.app",
-  messagingSenderId: "366122289514",
-  appId: "1:366122289514:web:02d810d7e470245c86bd13",
+  apiKey: "AIzaSyD9Sn6ThBAyBDtX99g2t9cslWxRLvp1D_0",
+  authDomain: "mitolecule-group.firebaseapp.com",
+  projectId: "mitolecule-group",
+  storageBucket: "mitolecule-group.firebasestorage.app",
+  messagingSenderId: "536537857958",
+  appId: "1:536537857958:web:9a9a6531c064b03b129967",
 };
 
 const app = initializeApp(firebaseConfig);
