@@ -76,6 +76,7 @@ function humanError(error) {
   const known = {
     "auth/invalid-email": "That email address doesn't look right.",
     "auth/too-many-requests": "Too many attempts. Please wait a little and try again.",
+    "auth/quota-exceeded": "Firebase has temporarily reached its daily email sign-in limit. Wait for the quota to reset, or review the email link sign-in limits in Firebase Console.",
     "auth/unauthorized-continue-uri": "This site is not configured for email sign-in yet.",
     "auth/unauthorized-domain": "This domain is not authorized for Firebase sign-in yet.",
     "permission-denied": "Firestore denied this request. Confirm the latest firestore.rules are published to this Firebase project.",
@@ -483,7 +484,7 @@ async function loadUserProfile(user, generation) {
       initializeProfile(user),
       new Promise((_, reject) => {
         timeout = window.setTimeout(
-          () => reject(new Error("Firestore did not respond in time. Check that Cloud Firestore is enabled and firestore.rules are published for this Firebase project.")),
+          () => reject(new Error("Firestore is taking too long to respond. Check your connection, confirm the Firestore API is enabled for project mitoleculegroup, and verify that the published rules allow this signed-in account.")),
           15000,
         );
       }),
